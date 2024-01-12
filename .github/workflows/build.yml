@@ -28,7 +28,7 @@ jobs:
         if: startsWith(matrix.os, 'ubuntu') && matrix.runtime == 'linux-arm64'
 
       - name: Build & publish Caprine
-        uses: samuelmeuli/action-electron-builder@v1
+        uses: therealartti/electron-builder-action@master
         if: startsWith(matrix.os, 'ubuntu') && matrix.runtime == 'linux-arm64'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
