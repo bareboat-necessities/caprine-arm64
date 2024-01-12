@@ -11,8 +11,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os:
-          - ubuntu-latest
+        runtime: [ linux-arm64 ]
+        include:
+        - runtime: linux-arm64
+          os: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v3
