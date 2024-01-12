@@ -24,7 +24,7 @@ jobs:
           cache: 'npm'
 
       - name: Install Snapcraft
-        uses: therealartti/electron-builder-action@master
+        uses: samuelmeuli/action-snapcraft@v1
         if: startsWith(matrix.os, 'ubuntu') && matrix.runtime == 'linux-arm64'
 
       - name: Build & publish Caprine
