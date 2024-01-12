@@ -25,7 +25,7 @@ jobs:
 
       - name: Install Snapcraft
         uses: samuelmeuli/action-snapcraft@v1
-        if: startsWith(matrix.os, 'ubuntu')
+        if: startsWith(matrix.os, 'ubuntu') && matrix.runtime == 'linux-arm64'
 
       - name: Build & publish Caprine
         uses: samuelmeuli/action-electron-builder@v1
@@ -38,5 +38,5 @@ jobs:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.snapcraft_token }}
 
       - name: Upload to Gemfury
-        if: startsWith(matrix.os, 'ubuntu')
+        if: startsWith(matrix.os, 'ubuntu') && matrix.runtime == 'linux-arm64'
         run: curl -F package=@$(find . -type f -name "*.deb") https://${{ secrets.gemfury_token }}@push.fury.io/lefterisgar/
