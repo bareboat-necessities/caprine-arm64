@@ -54,9 +54,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          repository: bareboat-necessities/lysmarine_gen
           prerelease: true
           files: dist/*.deb
-          name: vPackage
           body: "Release .deb"
         
