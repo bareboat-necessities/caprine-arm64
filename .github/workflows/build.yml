@@ -54,6 +54,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: true
           files: dist/*.deb
-          tag_name: ${{  github.ref  }}
+          tag_name: ${{ github.ref }}
           body: "Release .deb"
         
