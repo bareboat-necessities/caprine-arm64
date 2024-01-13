@@ -50,6 +50,8 @@ jobs:
 
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           repo_name: bareboat-necessities/lysmarine_gen
           # A personal access token for the GitHub repository in which the release will be created and edited.
