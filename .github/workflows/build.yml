@@ -1,6 +1,11 @@
 name: Build and publish
 on: [push]
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   tests:
     uses: ./.github/workflows/tests.yml
