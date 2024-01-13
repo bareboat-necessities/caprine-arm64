@@ -57,6 +57,6 @@ jobs:
           repository: bareboat-necessities/lysmarine_gen
           prerelease: true
           files: dist/*.deb
-          tag_name: vPackage
+          name: vPackage
           body: "Release .deb"
         
